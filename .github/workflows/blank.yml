@@ -13,20 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Install Python if necessary
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.12
-
-      # Run Python script to check if the current minute is even
+      # Run Python to check if the current minute is even
       - name: Check if the current minute is even
         run: |
           python -c "
 import datetime
 minute = datetime.datetime.now().minute
 if minute % 2 == 0:
-    print(f'The current minute ({minute}) is even.')
+    print('Current minute is even')
 else:
-    print(f'The current minute ({minute}) is odd.')
+    print('Current minute is odd')
           "
