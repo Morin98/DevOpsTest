@@ -8,12 +8,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-time:
+  check-minute:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # Run Python to check if the current minute is even
       - name: Check if the current minute is even
         run: |
           python script.py
+
+      - name: Check if the current second is between 31 and 59
+        run: |
+          python pythontest2.py
+           
+    
