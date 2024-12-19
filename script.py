@@ -1,10 +1,10 @@
 import datetime
-import os
+import sys
 
 minute = datetime.datetime.now().minute
 if minute % 2 == 0:
     print('Current minute is even')
-    os.exit(0)
+    sys.exit(0)
 else:
     print('Current minute is odd')
-    os.exit(1)
+    sys.exit(1)
