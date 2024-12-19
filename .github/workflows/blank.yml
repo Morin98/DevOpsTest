@@ -16,11 +16,4 @@ jobs:
       # Run Python to check if the current minute is even
       - name: Check if the current minute is even
         run: |
-          python -c "
-import datetime
-minute = datetime.datetime.now().minute
-if minute % 2 == 0:
-    print('Current minute is even')
-else:
-    print('Current minute is odd')
-          "
+          python script.py
